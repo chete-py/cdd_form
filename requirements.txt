@@ -1,2 +1,5 @@
 gunicorn
-Flask
+flask
+smtplib
+os
+pathlib
