@@ -112,9 +112,9 @@ def index():
                 receiver_email="collins.chetekei@ke.grassavoye.com",  # Change to your desired recipient
                 html_content=html_content
             )
-            flash('Email sent successfully!', 'success')
+            flash('Form submitted successfully', 'success')
         except Exception as e:
-            flash(f'Failed to send email: {e}', 'danger')
+            flash(f'Failed to submit: {e}', 'danger')
 
     return render_template('form.html')
 
