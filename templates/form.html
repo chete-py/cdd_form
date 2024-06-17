@@ -9,6 +9,130 @@
 
 </head>
 
+<style>
+    .bar {
+        display: inline-block;
+        width: 8px;
+        background-color: purple;
+    }
+    .bar1 { height: 15px; }
+    .bar2 { height: 8px; }
+    .bar3 { height: 15px; }
+    .bar4 { height: 8px; }
+    .bar5 { height: 15px; }
+</style>
+
+<body style="background-color:whitesmoke">
+
+
+    <form method="POST">
+        <div class="card" style="margin: 2.5% 10%; padding: 1.5%; ">
+            <div class="card-header" style='color:purple; text-align: center;'>
+                Willis Towers Watson 
+                <div class="bar bar1"></div>
+                <div class="bar bar2"></div>
+                <div class="bar bar3"></div>
+                <div class="bar bar4"></div>
+                <div class="bar bar5"></div> - Customer Due Diligence Form
+            </div>
+            <div class="card-header" style='color:purple;'>
+                Personal Details
+            </div>
+            <div class="card-body">         
+                <label>Title</label>   
+                <input class="form-control" type="text" name="title" placeholder="Enter Email" required>
+                <br>
+                <label>First Name</label>
+                <input class="form-control" type="text" name="fname" placeholder="Enter First Name" required>
+                <br>
+                <label>Second Name</label>
+                <input class="form-control" type="text" name="sname" placeholder="Enter Second Name" required>
+                <br>
+                <label>Residential <Address></Address></label>
+                <input class="form-control" type="text" name="address" placeholder="Enter Residential Address" required>
+                <br>
+                <label>ID Number/ Passport Number</label>
+                <input class="form-control" type="varchar" name="id_number" placeholder="Enter ID/Passport Number"required>
+                <br>
+                <label>Nationality</label>
+                <input class="form-control" type="text" name="nationality" placeholder="Enter Nationality" required>
+                <br>
+                <label>Phone Number</label>
+                <input class="form-control" type="number" name="phone_number" placeholder="Enter Phone Number"required>
+                <br>
+                <label>Email</label>
+                <input class="form-control" type="email" name="email" placeholder="Enter Email"required>
+                
+            </div>
+        </div>
+        <div class="card" style="margin: 2.5% 10%; padding: 1.5%;">
+            <div class="card-header" style='color:purple'>
+                Employment Details
+            </div>
+            <div class="card-body"> 
+                <label for="employment">Employment Status:</label>
+                    <select class="form-control" name="employment" id="employment">
+                    <option value="Employed">Employed</option>
+                    <option value="self">Self Employed</option>
+                    <option value="other">Other</option>                                     
+                    </select>
+                <br>
+                <label>Name Of Employer</label>
+                <input class="form-control" type="text" name="employer" placeholder="Enter Employer Name">
+                <br>
+                <label>Job Title</label>
+                <input class="form-control" type="text" name="job" placeholder="Enter Job Title">
+                <br>                
+                <label for="funds">Source Of Funds</label>
+                    <select class="form-control" name="funds" id="funds">
+                    <option value="salary">Salary</option>
+                    <option value="business">Business Earnings</option>
+                    <option value="loan">Loan</option> 
+                    <option value="pension">Pension</option>
+                    <option value="savings">Savings</option>  
+                    </select>
+                <br>
+               
+                <input type="submit" id='get_quote' value='Submit' class="btn btn-primary" >
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class=flashes>
+                    {% for category, message in messages %}
+                    <li class="{{ category }}">{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+                {% endwith %}
+
+            </div>
+        </div>    
+
+</form>
+
+</body>
+
+
+
+
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>CorpMe</title>
+
+</head>
+
 <body style="background-color:whitesmoke">
 
 
@@ -78,6 +202,6 @@
 </form>
 
 </body>
-
+ -->
 
 </html>
